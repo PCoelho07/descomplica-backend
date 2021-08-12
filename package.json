@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "test": "jest --no-cache --verbose"
   },
   "dependencies": {
     "typescript": "^4.3.5"
