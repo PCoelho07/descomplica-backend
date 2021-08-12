@@ -9,16 +9,28 @@ type StudentProps = {
 
 export class Student {
     protected name: string
-    protected cpf: Cpf
-    protected email: Email
+    protected cpf: string
+    protected email: string
 
     private constructor(name: string, cpf: Cpf, email: Email) {
         this.name = name
-        this.cpf = cpf
-        this.email = email
+        this.cpf = cpf.toString()
+        this.email = email.toString()
     }
 
     public static create(props: StudentProps): Student {
         return new Student(props.name, new Cpf(props.cpf), new Email(props.email))
+    }
+
+    getName(): string {
+        return this.name
+    }
+
+    getCpf(): string {
+        return this.cpf.toString()
+    }
+
+    getEmail(): string {
+        return this.email.toString()
     }
 }

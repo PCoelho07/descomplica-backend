@@ -1,4 +1,4 @@
-import { Student } from "@/domain/entities/student";
+import { Student } from "@/domain/entities/student/student";
 import { StudentRepository } from "@/domain/repositories/student-repository";
 import { StudentFilters } from "@/domain/types/student-filters";
 import { ListAllStudents as ListAllStudentsInterface } from "@/domain/usecases/list-all-students";
