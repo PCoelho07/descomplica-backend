@@ -1,5 +1,5 @@
 import { Student } from "@/domain/entities/student/student"
-import { StudentRepository } from "@/domain/repositories/student-repository"
+import { StudentRepository } from "@/data/repositories/student-repository"
 import { StudentFilters } from "@/domain/types/student-filters"
 import { ListAllStudents } from "@/data/usecases/list-all-students"
 import { ListAllStudents as ListAllStudentsInterface } from "@/domain/usecases/list-all-students"
