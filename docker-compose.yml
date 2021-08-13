@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: descomplica-app
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - 3000:3000
+
+  nginx:
+    container_name: descomplica-server
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - app
+    links:
+      - app
