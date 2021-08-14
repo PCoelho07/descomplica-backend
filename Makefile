@@ -17,6 +17,6 @@ clone-frontend:
 	@git clone $(FRONTEND_URL) ../frontend
 
 build-frontend: clone-frontend
-	@cd ../frontend && yarn && yarn build && docker cp ./build/. descomplica-server:/var/www/public/
+	@cd ../frontend && docker build -t descomplica-front:latest .
 
 .PHONY: setup-hosts build-backend clone-frontend build-frontend migrate
