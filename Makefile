@@ -1,5 +1,5 @@
 
-FRONTEND_URL=https://github.com/PCoelho07/descomplica-frontend
+FRONTEND_URL := https://github.com/PCoelho07/descomplica-frontend
 
 all: setup-hosts build-backend clone-frontend build-frontend
 
@@ -9,7 +9,7 @@ setup-hosts:
 build-backend:
 	@docker-compose up -d --build
 
-clone-frontend: $(FRONTEND_URL)
+clone-frontend:
 	@mkdir ../frontend
 	@cd ../frontend
 	@git clone $(FRONTEND_URL) .
