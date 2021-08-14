@@ -10,6 +10,8 @@ services:
       - mysql
     ports:
       - 3000:3000
+    links:
+      - mysql
 
   nginx:
     container_name: descomplica-server
