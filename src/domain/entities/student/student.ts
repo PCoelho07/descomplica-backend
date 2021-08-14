@@ -1,11 +1,6 @@
+import { StudentProps } from "@/domain/types/student-props"
 import { Cpf } from "@/domain/value-objects/cpf"
 import { Email } from "@/domain/value-objects/email"
-
-type StudentProps = {
-    name: string
-    cpf: string
-    email: string
-}
 
 export class Student {
     protected name: string

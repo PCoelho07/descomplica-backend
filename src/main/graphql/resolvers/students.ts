@@ -1,7 +1,7 @@
 import { StudentRepository } from "@/data/repositories/student-repository"
 import { ListAllStudents } from "@/data/usecases/list-all-students"
 import { StudentFilters } from "@/domain/types/student-filters"
-import { DatabaseStudentRepository } from "@/infrastructure/repositories/DatabaseStudentRepository"
+import { DatabaseStudentRepository } from "@/infrastructure/repositories/mysql/DatabaseStudentRepository"
 
 export default {
     Query: {

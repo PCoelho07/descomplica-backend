@@ -20,3 +20,14 @@ services:
       - app
     links:
       - app
+
+  mysql:
+    container_name: descomplica-database
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=descomplica
+      - MYSQL_USER=descomplica
+      - MYSQL_PASSWORD=descomplica
+      - MYSQL_DATABASE=descomplica
+    ports:
+      - 3306:3306

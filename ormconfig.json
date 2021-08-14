@@ -1,0 +1,17 @@
+{
+    "type": "mysql",
+    "host": "mysql",
+    "port": 3306,
+    "username": "descomplica",
+    "password": "descomplica",
+    "database": "descomplica",
+    "entities": [
+        "build/src/infrastructure/repositories/mysql/models/*.js"
+    ],
+    "migrations": [
+        "build/src/main/database/migrations/*.js"
+    ],
+    "cli": {
+        "migrationsDir": "src/main/database/migrations"
+    }
+}
