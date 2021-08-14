@@ -34,11 +34,11 @@ E então vc deverá ver a mensagem:
  Server running at: http://localhost:3000
  Database connected with success!
 ```
-Após isso, vamos executar as `migrations`, e para isso vc deve executar o comando:
+Após isso, vamos executar as `migrations` e as `seeds`, e para isso vc deve executar o comando:
 
 ```bash
 $ make migrate
 ```
-E pronto, basta acessar a url `http://descomplica.test` e GG.
+E pronto, basta acessar a url [http://descomplica.test](http://descomplica.test) e GG.
 
 =D
