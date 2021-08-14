@@ -19,4 +19,7 @@ clone-frontend:
 build-frontend: clone-frontend
 	@cd ../frontend && docker build -t descomplica-front:latest .
 
+restart-app:
+	@docker-compose restart app
+
 .PHONY: setup-hosts build-backend clone-frontend build-frontend migrate
