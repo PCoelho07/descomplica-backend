@@ -11,12 +11,9 @@ build-backend:
 
 clone-frontend:
 	@mkdir ../frontend
-	@cd ../frontend
-	@git clone $(FRONTEND_URL) .
+	@git clone $(FRONTEND_URL) ../frontend
 
 build-frontend: clone-frontend
-	@cd ../frontend
-	@npm run build
-	@docker cp ./build/. descomplica-server:/var/www/public/
+	@cd ../frontend && yarn && yarn build && docker cp ./build/. descomplica-server:/var/www/public/
 
 .PHONY: setup-hosts build-backend clone-frontend build-frontend
