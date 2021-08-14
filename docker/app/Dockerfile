@@ -6,7 +6,7 @@ RUN npm install pm2 --global
 
 COPY package.json ./
 
-RUN npm install --production
+RUN npm install
 
 COPY . .
 

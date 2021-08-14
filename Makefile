@@ -9,6 +9,9 @@ setup-hosts:
 build-backend:
 	@docker-compose up -d --build
 
+migrate:
+	@docker-compose exec app npm run typeorm migration:run
+
 clone-frontend:
 	@mkdir ../frontend
 	@git clone $(FRONTEND_URL) ../frontend
@@ -16,4 +19,4 @@ clone-frontend:
 build-frontend: clone-frontend
 	@cd ../frontend && yarn && yarn build && docker cp ./build/. descomplica-server:/var/www/public/
 
-.PHONY: setup-hosts build-backend clone-frontend build-frontend
+.PHONY: setup-hosts build-backend clone-frontend build-frontend migrate
